@@ -1,0 +1,46 @@
+﻿Analyzing app_scheduler...                                      
+
+   info - Parameter 'message' could be a super parameter - lib\core\error\failures.dart:13:9 - use_super_parameters
+   info - Parameter 'message' could be a super parameter - lib\core\error\failures.dart:17:9 - use_super_parameters
+   info - Parameter 'message' could be a super parameter - lib\core\error\failures.dart:21:9 - use_super_parameters
+   info - Parameter 'message' could be a super parameter - lib\core\error\failures.dart:25:9 - use_super_parameters
+   info - Parameter 'message' could be a super parameter - lib\core\error\failures.dart:29:9 - use_super_parameters
+warning - Unused import: 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart' - lib\core\services\background_service.dart:1:8 - unused_import
+   info - 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\core\theme\app_theme.dart:13:9 - deprecated_member_use
+  error - The name 'ApplicationWithIcon' isn't defined, so it can't be used in an 'is' expression - lib\features\scheduler\presentation\pages\app_discovery_page.dart:48:37 - type_test_with_undefined_name
+  error - The getter 'icon' isn't defined for the type 'Application' - lib\features\scheduler\presentation\pages\app_discovery_page.dart:49:44 - undefined_getter
+warning - Dead code - lib\features\scheduler\presentation\pages\app_discovery_page.dart:50:27 - dead_code
+  error - The function 'StateProvider' isn't defined - lib\features\scheduler\presentation\providers\app_discovery_provider.dart:17:33 - undefined_function
+  error - Classes can only extend other classes - lib\features\scheduler\presentation\providers\history_notifier.dart:25:31 - extends_non_class
+  error - Too many positional arguments: 0 expected, but 1 found - lib\features\scheduler\presentation\providers\history_notifier.dart:28:37 - extra_positional_arguments
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\history_notifier.dart:33:5 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\history_notifier.dart:33:13 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\history_notifier.dart:39:11 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\history_notifier.dart:39:19 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\history_notifier.dart:42:9 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\history_notifier.dart:42:17 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\history_notifier.dart:48:5 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\history_notifier.dart:48:13 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\history_notifier.dart:54:11 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\history_notifier.dart:54:19 - undefined_identifier
+  error - The function 'StateNotifierProvider' isn't defined - lib\features\scheduler\presentation\providers\history_notifier.dart:61:5 - undefined_function
+  error - Classes can only extend other classes - lib\features\scheduler\presentation\providers\schedule_notifier.dart:30:32 - extends_non_class
+  error - Too many positional arguments: 0 expected, but 1 found - lib\features\scheduler\presentation\providers\schedule_notifier.dart:33:38 - extra_positional_arguments
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:38:5 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:38:13 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:44:11 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:44:19 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:48:9 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:48:17 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:58:5 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:58:13 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:62:7 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:62:15 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:74:9 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:74:17 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:87:5 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:87:13 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:93:11 - undefined_identifier
+  error - Undefined name 'state' - lib\features\scheduler\presentation\providers\schedule_notifier.dart:93:19 - undefined_identifier
+  error - The function 'StateNotifierProvider' isn't defined - lib\features\scheduler\presentation\providers\schedule_notifier.dart:103:5 - undefined_function
+
