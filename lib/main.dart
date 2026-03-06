@@ -13,6 +13,7 @@ void main() async {
   // Initialize Hive
   await Hive.initFlutter();
   Hive.registerAdapter(ScheduleModelAdapter());
+  Hive.registerAdapter(ScheduleFrequencyModelAdapter()); // Added this
   await Hive.openBox<ScheduleModel>(AppConstants.hiveBoxSchedules);
   await Hive.openBox<ScheduleModel>(AppConstants.hiveBoxHistory);
 

@@ -1,4 +1,6 @@
+import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import '../../domain/entities/schedule.dart';
 import 'domain_providers.dart';
 
@@ -24,13 +26,22 @@ class HistoryState {
 
 class HistoryNotifier extends StateNotifier<HistoryState> {
   final Ref ref;
+  StreamSubscription? _subscription;
 
   HistoryNotifier(this.ref) : super(HistoryState()) {
+    _listenToHistoryChanges();
     loadHistory();
   }
 
+  void _listenToHistoryChanges() {
+    final box = ref.read(historyBoxProvider);
+    _subscription = box.watch().listen((_) {
+      loadHistory();
+    });
+  }
+
   Future<void> loadHistory() async {
-    state = state.copyWith(isLoading: true, error: null);
+    // state = state.copyWith(isLoading: true, error: null); // Remove loading for background updates
     final usecase = ref.read(getHistoryProvider);
     final result = await usecase.execute();
 
@@ -54,6 +65,12 @@ class HistoryNotifier extends StateNotifier<HistoryState> {
           state = state.copyWith(isLoading: false, error: failure.message),
       (_) => loadHistory(),
     );
+  }
+
+  @override
+  void dispose() {
+    _subscription?.cancel();
+    super.dispose();
   }
 }
 
