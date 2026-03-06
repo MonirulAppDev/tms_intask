@@ -1,38 +1,93 @@
-# App Scheduler
+# 🕒 TMS InTask - App Scheduler
 
-A production-ready Flutter application built using Clean Architecture and Riverpod. 
-App Scheduler allows users to schedule installed Android applications to automatically launch at a designated future time.
+**TMS InTask** is a powerful and production-ready Flutter application built with **Clean Architecture** and **Riverpod**. It allows users to schedule any installed Android application to launch automatically at a specific time, even if the device is locked or the app is closed.
 
-## Architecture
+---
 
-The application strictly adheres to Clean Architecture principles:
-- **Presentation Layer**: UI, Widgets, and Riverpod StateNotifiers.
-- **Domain Layer**: Core Business Logic, Entities, and Repository Interfaces.
-- **Data Layer**: API/Local Implementations using Hive, `device_apps`, and `android_alarm_manager_plus`.
+## 📺 App Demo
 
-## Key Features
-- **App Discovery**: View all installed apps and search through them quickly.
-- **Scheduling**: Schedule any app to launch automatically at a specified date and time in the future. Conflict detection is supported.
-- **Schedule Management**: View upcoming schedules and delete them if you change your mind.
-- **Execution History**: View the historical logs of previously executed scheduled apps.
-- **Background Execution**: Works seamlessly in the background utilizing Android's AlarmManager, even if the flutter application is completely killed.
+<div align="center">
+  <video src="assets/video/schedule_app.mp4" width="400" controls>
+    Your browser does not support the video tag.
+  </video>
+</div>
 
-## Dependencies highlights
-- `flutter_riverpod` & `riverpod_annotation`
-- `hive` & `hive_flutter`
-- `device_apps`
-- `android_alarm_manager_plus`
-- `dartz`
-- `equatable`
+---
 
-## Installation
-1. Clone the repository.
-2. Run `flutter pub get`
-3. Make sure you are testing on an Android Device or Emulator.
-4. Run `flutter run`.
+## 📸 Screenshots
 
-### Permissions Note
-Since Android 12+, scheduling exact alarms requires the `SCHEDULE_EXACT_ALARM` and `USE_EXACT_ALARM` permissions. This app seamlessly hooks into Android's native alarms. If permissions are restricted on some custom OS versions, make sure to allow the app to run in the background.
+<div align="center">
+  <table>
+    <tr>
+      <td width="25%"><b>Main Schedule</b><br/><img src="assets/screenshots/schedule.jpeg" width="200"/></td>
+      <td width="25%"><b>App Selection</b><br/><img src="assets/screenshots/schedule_app_list.jpeg" width="200"/></td>
+      <td width="25%"><b>Setup Alarm</b><br/><img src="assets/screenshots/schedule_setup.jpeg" width="200"/></td>
+      <td width="25%"><b>Conflict Detection</b><br/><img src="assets/screenshots/schedule_conflict.jpeg" width="200"/></td>
+    </tr>
+  </table>
+</div>
 
-## Known Limitations
-- The application currently supports Android only since it relies on native Android App Intents and Android Alarm Manager.
+---
+
+## 🚀 Key Features
+
+- **📱 App Discovery:** Automatically lists all installed apps with a quick search feature.
+- **⏰ Smart Scheduling:** Schedule any app to launch at a precise date and time.
+- **🔄 Recurring Tasks:** Support for one-time and daily recurring schedules.
+- **🛡️ Conflict Detection:** Prevents scheduling multiple apps at the exact same second to ensure reliability.
+- **📜 Execution History:** Maintain a detailed log of successful and failed app launches.
+- **⚙️ Background Execution:** Uses **Android AlarmManager** to trigger events even when the app is killed or the phone is rebooted.
+- **🎨 Modern UI:** Built with Material 3 design principles for a smooth user experience.
+
+---
+
+## 🏗️ Architecture & Tech Stack
+
+This project follows **Clean Architecture** (Domain, Data, Presentation layers) to ensure scalability and maintainability.
+
+- **State Management:** `flutter_riverpod`
+- **Local Database:** `hive` & `hive_flutter` (NoSQL)
+- **Background Tasks:** `android_alarm_manager_plus`
+- **App Interaction:** `device_apps`
+- **Functional Programming:** `dartz` (for Either/Failure handling)
+- **Dependency Injection:** Handled via Riverpod Providers.
+
+---
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/tms_intask.git
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Run Build Runner (if needed):**
+   ```bash
+   flutter pub run build_runner build --delete-conflicting-outputs
+   ```
+
+4. **Run on Android:**
+   *Make sure an Android device/emulator is connected.*
+   ```bash
+   flutter run
+   ```
+
+---
+
+## ⚠️ Permissions
+
+To work correctly on Android 12+, the app requires:
+- `SCHEDULE_EXACT_ALARM`
+- `USE_EXACT_ALARM`
+- `RECEIVE_BOOT_COMPLETED` (to reschedule alarms after phone reboot)
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
