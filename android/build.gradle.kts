@@ -27,6 +27,8 @@ subprojects {
                     val setNamespaceMethod = androidExt.javaClass.methods.find { it.name == "setNamespace" && it.parameterCount == 1 }
                     setNamespaceMethod?.invoke(androidExt, project.group.toString())
                 }
+                val setCompileSdkVersionMethod = androidExt.javaClass.methods.find { it.name == "setCompileSdkVersion" && it.parameterTypes.firstOrNull() == Int::class.java }
+                setCompileSdkVersionMethod?.invoke(androidExt, 36)
             } catch (e: Exception) {
                 // Ignore mistakes
             }

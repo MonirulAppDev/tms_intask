@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.pts.app_scheduler"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
