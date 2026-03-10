@@ -85,9 +85,3 @@ To work correctly on Android 12+, the app requires:
 - `SCHEDULE_EXACT_ALARM`
 - `USE_EXACT_ALARM`
 - `RECEIVE_BOOT_COMPLETED` (to reschedule alarms after phone reboot)
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
